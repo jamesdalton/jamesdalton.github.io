@@ -1,0 +1,74 @@
+$extra-small-font-size:  $base-font-size * 0.75 !default;
+
+.site-footer {
+    .wrapper {
+        .footer-heading {
+            margin-bottom: 0;
+        }
+        .footer-col {
+            width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        }
+        .legal {
+            font-size: $extra-small-font-size;
+            color: $grey-color;
+            .disclaimer {
+                padding-bottom: 5px;
+            }
+  
+            .copyright,
+            .license {
+                display: block;
+                padding-bottom: 5px;
+            }
+  
+            .license {
+                padding-top: 5px;
+            }
+  
+            a[rel="license"] {
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+.post-header {
+    .post-title {
+        margin-bottom: 0;
+    }
+}
+.post-categories, .post-tags {
+    font-size: $extra-small-font-size;
+}
+.post-list {
+    .post-link {
+        line-height: 0.75
+    }
+    .post-excerpt {
+        p {
+            margin-bottom: 0
+        }
+    }
+    .post-continue-reading {
+        font-size: $small-font-size;
+    }
+    .post-meta.post-date {
+        font-size: $extra-small-font-size;
+        text-decoration: none;
+        display: inline-block;
+    }
+}
+
+.about-image {
+    float: left;
+    padding-right: 12px;
+}
+
+.site-header {
+    line-height: normal;
+    padding-top: 16px;
+    .site-sub-title {
+        @include relative-font-size(0.8);
+        display: block;
+    }
+}
