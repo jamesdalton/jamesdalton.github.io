@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ways to load a file to Postgres
+description: A survey of the ways to use .Net to load a file into Postgres with timings.
 categories: Databases DotNet Postgres
 tags: async databases dotnet npgsql postgres
 ---

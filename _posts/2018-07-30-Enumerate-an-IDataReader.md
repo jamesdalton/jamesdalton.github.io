@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Enumerate an IDataReader
+description: Using an IDisposable with an Enumerable and how to turn IDataReader.read into an Enumerable
 categories: Databases DotNet
 tags: 	datareader dispose enumerable
 excerpt_separator: <!--more-->

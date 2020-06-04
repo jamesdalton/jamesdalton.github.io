@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Why async is important to a web service"
-categories: Concurrency DotNet
-tags: async dotnet
+description: How using async calls in a .Net app can improve your throughput.
+categories: Concurrency .Net
+tags: Async .Net
 ---
 
 At a high level, ASP.Net uses a thread pool to process requests. How many threads is based on a number of factors including configuration and work load. New threads will be added to the pool as needed but there is a startup penalty. According to [ASP.NET Thread Usage on IIS 7.5, IIS 7.0 and IIS 6.0](https://blogs.msdn.microsoft.com/tmarq/2007/07/20/asp-net-thread-usage-on-iis-7-5-iis-7-0-and-iis-6-0/), it only adds 2 per second. If there is a sudden burst of activity, it will take time to spin up new threads. One way to avoid the penalty is to make the best use of the threads available.
