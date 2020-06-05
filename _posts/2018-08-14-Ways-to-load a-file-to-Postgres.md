@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ways to load a file to Postgres
+title: Ways to Load a File to Postgres
 description: A survey of the ways to use .Net to load a file into Postgres with timings.
-categories: Databases DotNet Postgres
-tags: async databases dotnet npgsql postgres
+categories: Databases .Net Postgres
+tags: Async Databases .Net npgsql Postgres
 ---
 
 To write a post about async queries I first need to load some data to Postgres. The data came form <https://www.kaggle.com/CooperUnion/anime-recommendations-database>. I wanted to use real data and I’m an anime fan, so it was the perfect fit. It’s a CSV file so there is no normalization. That’s ok. If there was this would be a short post. I decided to try several ways of loading the data to see which would be fastest. To be honest, I already knew which one was going to win I wanted to see how close I could get using other methods without over engineering it or getting cute with the code. I ended up going there anyway, but the method that came in a close second was a simple solution.
 
-## The data
+## The Data
 
 A little bit about the data before diving into the solutions. The file has seven columns, id, name, genres, type, episodes, rating, and members. Each anime could have zero or more genres with occasional duplication packed into a single quoted comma delimited list. At first, I thought all columns had values but quickly learned only id, name, and members where guaranteed. I load the data into a staging table using psql’s `\copy`. I then tried several ways to load the data into these tables.
 

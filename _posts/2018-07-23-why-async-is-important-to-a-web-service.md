@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why async is important to a web service"
+title: "Why Async is Important to a Web Service"
 description: How using async calls in a .Net app can improve your throughput.
 categories: Concurrency .Net
 tags: Async .Net
@@ -64,7 +64,7 @@ Exiting main.
 
 Line 6 of the output surprises a lot of developers. In main it comes after the call to MakeRequest but is printed before MakeRequest returns a result. That's because after line 5 execution returns to main and at line 21 `awaits` the result of MakeRequest. It is possible to wait on more than one async call at once. The next example shows how and the difference using async can make.
 
-## Throughput example
+## Throughput Example
 
 There are two parts to this example, an API and a client. The API is simple with two endpoints, /api/sync and /api/async. Both delay the response by 0.5 - 2.0 seconds calling `Thread.Sleep` and `Task.Delay` respectively. Sleep holds the thread until the time expires while Delay release the thread and resumes after.
 The client is simple and the important part is this method.
